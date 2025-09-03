@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team1 Activity Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>🔥 Avalanche Team1 – Builder Activity</h1>
+    <p id="meta" class="muted"></p>
+    <div class="notice">
+      Data source: <code id="stats-url"></code>
+      (override with <code>?stats=FULL_URL</code>)
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>Top Repos (30d)</h2>
+        <table id="top-repos" class="tbl"></table>
+      </div>
+      <div class="card">
+        <h2>Top Contributors (30d)</h2>
+        <table id="top-contrib" class="tbl"></table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Repo Activity</h2>
+      <div class="controls">
+        <label>Track
+          <select id="track"></select>
+        </label>
+        <label>Min commits
+          <input id="min-commits" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <table id="repos" class="tbl"></table>
+    </section>
+  </main>
+
+  <footer class="container muted">
+    Built as a static page. Hosted on GitHub Pages.
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
