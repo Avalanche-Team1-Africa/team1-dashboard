@@ -1,4 +1,4 @@
-# 🌐 Avalanche Team1 Dashboard
+# 🌐 Avalanche Team1 Kenya Dashboard
 
 A unified dashboard that tracks **GitHub activity across the Avalanche-Team1-Africa org**.  
 This project makes it easy for builders, mentors, and sponsors to **benchmark progress, identify momentum, and celebrate contributions**.
