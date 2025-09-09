@@ -1,0 +1,705 @@
+{
+  "org": "Avalanche-Team1-Africa",
+  "generated_at": "2025-09-09T05:13:30.525168Z",
+  "window_days": 30,
+  "repos_total": 68,
+  "repos": [
+    {
+      "name": "team1-dashboard",
+      "full": "Avalanche-Team1-Africa/team1-dashboard",
+      "topics": [],
+      "track": null,
+      "commits_count": 16,
+      "contributors": [
+        {
+          "login": "EstherLavender",
+          "commits": 13
+        },
+        {
+          "login": "JosephNjorog",
+          "commits": 3
+        }
+      ],
+      "last_commit_at": "2025-09-09T05:02:10Z"
+    },
+    {
+      "name": "PledgR",
+      "full": "Avalanche-Team1-Africa/PledgR",
+      "topics": [],
+      "track": null,
+      "commits_count": 21,
+      "contributors": [
+        {
+          "login": "I-Macharia",
+          "commits": 21
+        }
+      ],
+      "last_commit_at": "2025-08-26T18:16:49Z"
+    },
+    {
+      "name": "KweliVote",
+      "full": "Avalanche-Team1-Africa/KweliVote",
+      "topics": [],
+      "track": null,
+      "commits_count": 1,
+      "contributors": [
+        {
+          "login": "snjiraini",
+          "commits": 1
+        }
+      ],
+      "last_commit_at": "2025-08-23T11:30:58Z"
+    },
+    {
+      "name": "portfolio-starter-kit",
+      "full": "Avalanche-Team1-Africa/portfolio-starter-kit",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-08-06T15:53:21Z"
+    },
+    {
+      "name": "create-issue-action",
+      "full": "Avalanche-Team1-Africa/create-issue-action",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2024-04-26T02:40:31Z"
+    },
+    {
+      "name": "APY-Aggregaor",
+      "full": "Avalanche-Team1-Africa/APY-Aggregaor",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-07-20T13:59:32Z"
+    },
+    {
+      "name": "Docs",
+      "full": "Avalanche-Team1-Africa/Docs",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-07-28T15:27:58Z"
+    },
+    {
+      "name": "Team---AI-Smart-Contract-Debugger-",
+      "full": "Avalanche-Team1-Africa/Team---AI-Smart-Contract-Debugger-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-07-04T22:54:55Z"
+    },
+    {
+      "name": "Tg_mini_app",
+      "full": "Avalanche-Team1-Africa/Tg_mini_app",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-27T16:03:44Z"
+    },
+    {
+      "name": "Team-10-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-10-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:48:02Z"
+    },
+    {
+      "name": "Team-8-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-8-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:45:17Z"
+    },
+    {
+      "name": "Team-5-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-5-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:38:21Z"
+    },
+    {
+      "name": "Team-4-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-4-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:36:07Z"
+    },
+    {
+      "name": "Team-3-NightsOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-3-NightsOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:34:16Z"
+    },
+    {
+      "name": "Team-2-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-2-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:32:20Z"
+    },
+    {
+      "name": "Team-1-NightOfCode-",
+      "full": "Avalanche-Team1-Africa/Team-1-NightOfCode-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-20T21:28:55Z"
+    },
+    {
+      "name": "avasend",
+      "full": "Avalanche-Team1-Africa/avasend",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T10:05:20Z"
+    },
+    {
+      "name": "Chain",
+      "full": "Avalanche-Team1-Africa/Chain",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-11T10:31:28Z"
+    },
+    {
+      "name": "Education-Access",
+      "full": "Avalanche-Team1-Africa/Education-Access",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-07T12:30:26Z"
+    },
+    {
+      "name": "Identity-Access",
+      "full": "Avalanche-Team1-Africa/Identity-Access",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-07T12:28:09Z"
+    },
+    {
+      "name": "Avachama",
+      "full": "Avalanche-Team1-Africa/Avachama",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-07T12:27:17Z"
+    },
+    {
+      "name": "Events-Ticketing",
+      "full": "Avalanche-Team1-Africa/Events-Ticketing",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-07T12:23:15Z"
+    },
+    {
+      "name": "event-vax",
+      "full": "Avalanche-Team1-Africa/event-vax",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-27T17:18:00Z"
+    },
+    {
+      "name": "Daobitat-frontend",
+      "full": "Avalanche-Team1-Africa/Daobitat-frontend",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-19T14:49:55Z"
+    },
+    {
+      "name": "Event-Ticketing",
+      "full": "Avalanche-Team1-Africa/Event-Ticketing",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-18T07:59:24Z"
+    },
+    {
+      "name": "Carbon-Corp",
+      "full": "Avalanche-Team1-Africa/Carbon-Corp",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T13:25:40Z"
+    },
+    {
+      "name": "Daobitat-contracts",
+      "full": "Avalanche-Team1-Africa/Daobitat-contracts",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T11:22:37Z"
+    },
+    {
+      "name": "carlogix",
+      "full": "Avalanche-Team1-Africa/carlogix",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-06-10T10:52:54Z"
+    },
+    {
+      "name": "Micro-Lending-System",
+      "full": "Avalanche-Team1-Africa/Micro-Lending-System",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T09:45:14Z"
+    },
+    {
+      "name": "Emktec-",
+      "full": "Avalanche-Team1-Africa/Emktec-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T08:39:30Z"
+    },
+    {
+      "name": "heritagechain-protocol",
+      "full": "Avalanche-Team1-Africa/heritagechain-protocol",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T08:24:06Z"
+    },
+    {
+      "name": "Orion",
+      "full": "Avalanche-Team1-Africa/Orion",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-17T08:04:41Z"
+    },
+    {
+      "name": "plastic-soko",
+      "full": "Avalanche-Team1-Africa/plastic-soko",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-16T22:29:14Z"
+    },
+    {
+      "name": "Certificate-Issuance-System",
+      "full": "Avalanche-Team1-Africa/Certificate-Issuance-System",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-05-15T07:11:14Z"
+    },
+    {
+      "name": "irungu",
+      "full": "Avalanche-Team1-Africa/irungu",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T20:15:23Z"
+    },
+    {
+      "name": "MyApplication",
+      "full": "Avalanche-Team1-Africa/MyApplication",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T17:53:52Z"
+    },
+    {
+      "name": "Cell",
+      "full": "Avalanche-Team1-Africa/Cell",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:27:18Z"
+    },
+    {
+      "name": "J-an-john",
+      "full": "Avalanche-Team1-Africa/J-an-john",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:27:07Z"
+    },
+    {
+      "name": "unfiled",
+      "full": "Avalanche-Team1-Africa/unfiled",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:25:50Z"
+    },
+    {
+      "name": "FarmTrace",
+      "full": "Avalanche-Team1-Africa/FarmTrace",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-13T11:07:50Z"
+    },
+    {
+      "name": "JuliusMaaTech",
+      "full": "Avalanche-Team1-Africa/JuliusMaaTech",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:24:37Z"
+    },
+    {
+      "name": "BRIAN",
+      "full": "Avalanche-Team1-Africa/BRIAN",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:23:27Z"
+    },
+    {
+      "name": "DigiMart",
+      "full": "Avalanche-Team1-Africa/DigiMart",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:23:27Z"
+    },
+    {
+      "name": "wisly",
+      "full": "Avalanche-Team1-Africa/wisly",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:22:37Z"
+    },
+    {
+      "name": "Imageclassification-",
+      "full": "Avalanche-Team1-Africa/Imageclassification-",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:20:37Z"
+    },
+    {
+      "name": "Snow",
+      "full": "Avalanche-Team1-Africa/Snow",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:17:23Z"
+    },
+    {
+      "name": "Gitonga",
+      "full": "Avalanche-Team1-Africa/Gitonga",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:15:36Z"
+    },
+    {
+      "name": "app1",
+      "full": "Avalanche-Team1-Africa/app1",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:15:21Z"
+    },
+    {
+      "name": "Projecthosisalama",
+      "full": "Avalanche-Team1-Africa/Projecthosisalama",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:14:38Z"
+    },
+    {
+      "name": "paul",
+      "full": "Avalanche-Team1-Africa/paul",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:10:40Z"
+    },
+    {
+      "name": "GenGram",
+      "full": "Avalanche-Team1-Africa/GenGram",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-03-24T15:09:15Z"
+    },
+    {
+      "name": "Token-Contract-for-Digital-Assets",
+      "full": "Avalanche-Team1-Africa/Token-Contract-for-Digital-Assets",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-01T12:16:29Z"
+    },
+    {
+      "name": "Lottery-DAO",
+      "full": "Avalanche-Team1-Africa/Lottery-DAO",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-08T17:52:43Z"
+    },
+    {
+      "name": "StableCoin-Project",
+      "full": "Avalanche-Team1-Africa/StableCoin-Project",
+      "topics": [
+        "bankless",
+        "decentralized-finance",
+        "defi"
+      ],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-22T21:05:30Z"
+    },
+    {
+      "name": "Crowdfunding-team-5",
+      "full": "Avalanche-Team1-Africa/Crowdfunding-team-5",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-21T11:27:22Z"
+    },
+    {
+      "name": "jengawize",
+      "full": "Avalanche-Team1-Africa/jengawize",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-01T10:09:22Z"
+    },
+    {
+      "name": "Freelancer_Payment_Escrow",
+      "full": "Avalanche-Team1-Africa/Freelancer_Payment_Escrow",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-01T09:04:48Z"
+    },
+    {
+      "name": "GreenXchange",
+      "full": "Avalanche-Team1-Africa/GreenXchange",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-02-01T09:08:44Z"
+    },
+    {
+      "name": "Rock-Paper-Scissors-Game",
+      "full": "Avalanche-Team1-Africa/Rock-Paper-Scissors-Game",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-31T13:46:28Z"
+    },
+    {
+      "name": "Subscription-Management-System",
+      "full": "Avalanche-Team1-Africa/Subscription-Management-System",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-31T13:20:50Z"
+    },
+    {
+      "name": "Time-Locked-Savings-Contract",
+      "full": "Avalanche-Team1-Africa/Time-Locked-Savings-Contract",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-31T10:22:49Z"
+    },
+    {
+      "name": "Charity-Fund",
+      "full": "Avalanche-Team1-Africa/Charity-Fund",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-20T07:10:04Z"
+    },
+    {
+      "name": "Loyalty-Points-Platform",
+      "full": "Avalanche-Team1-Africa/Loyalty-Points-Platform",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-18T19:05:34Z"
+    },
+    {
+      "name": "CrowdFunding-Group19",
+      "full": "Avalanche-Team1-Africa/CrowdFunding-Group19",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-17T18:39:51Z"
+    },
+    {
+      "name": "Rental-Contract-Agreement",
+      "full": "Avalanche-Team1-Africa/Rental-Contract-Agreement",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-15T20:09:12Z"
+    },
+    {
+      "name": "Avalanche-L1-Days",
+      "full": "Avalanche-Team1-Africa/Avalanche-L1-Days",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-09T09:40:03Z"
+    },
+    {
+      "name": "GiftRegistry",
+      "full": "Avalanche-Team1-Africa/GiftRegistry",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-08T09:51:47Z"
+    },
+    {
+      "name": "skill-badge-system",
+      "full": "Avalanche-Team1-Africa/skill-badge-system",
+      "topics": [],
+      "track": null,
+      "commits_count": 0,
+      "contributors": [],
+      "last_commit_at": "2025-01-04T10:57:47Z"
+    }
+  ],
+  "leaderboards": {
+    "top_repos_30d": [
+      {
+        "repo": "PledgR",
+        "commits": 21
+      },
+      {
+        "repo": "team1-dashboard",
+        "commits": 16
+      },
+      {
+        "repo": "KweliVote",
+        "commits": 1
+      },
+      {
+        "repo": "portfolio-starter-kit",
+        "commits": 0
+      },
+      {
+        "repo": "create-issue-action",
+        "commits": 0
+      },
+      {
+        "repo": "APY-Aggregaor",
+        "commits": 0
+      },
+      {
+        "repo": "Docs",
+        "commits": 0
+      },
+      {
+        "repo": "Team---AI-Smart-Contract-Debugger-",
+        "commits": 0
+      },
+      {
+        "repo": "Tg_mini_app",
+        "commits": 0
+      },
+      {
+        "repo": "Team-10-NightOfCode-",
+        "commits": 0
+      }
+    ],
+    "top_contributors_30d": [
+      {
+        "login": "I-Macharia",
+        "commits": 21
+      },
+      {
+        "login": "EstherLavender",
+        "commits": 13
+      },
+      {
+        "login": "JosephNjorog",
+        "commits": 3
+      },
+      {
+        "login": "snjiraini",
+        "commits": 1
+      }
+    ]
+  }
+}
