@@ -99,6 +99,13 @@ async function load() {
     `Org: ${data.org} • Window: last ${data.window_days} days • Generated: ${new Date(data.generated_at).toLocaleString()}`;
   
   document.getElementById("update-time").textContent = new Date(data.generated_at).toLocaleString();
+  
+  // Create activity chart
+  createActivityChart(data);
+  
+  // Fetch and update PR and Issue stats
+  fetchPullRequestStats(org, sinceISO);
+  fetchIssueStats(org, sinceISO);
 
   // Render top repositories table
   renderTable(
@@ -135,49 +142,8 @@ async function load() {
     trackSel.appendChild(opt);
   });
 
-  const minInput = document.getElementById("min-commits");
-  const showPrivateCheckbox = document.getElementById("show-private");
-
-  // Filter function for repo activity
-  function applyFilters() {
-    const track = trackSel.value;
-    const min = parseInt(minInput.value || "0", 10);
-    const showPrivate = showPrivateCheckbox.checked;
-    
-    // Filter and sort repos
-    const filteredRepos = (data.repos || [])
-      .filter(r => (track === "All" ? true : r.track === track))
-      .filter(r => (r.commits_count || 0) >= min)
-      .filter(r => showPrivate ? true : !r.isPrivate)
-      .sort((a,b) => (b.commits_count || 0) - (a.commits_count || 0));
-    
-    // Update filter count
-    document.getElementById("filter-count").textContent = 
-      `Showing ${filteredRepos.length} of ${data.repos?.length || 0} repositories`;
-    
-    // Format for table display
-    const rows = filteredRepos.map(r => [
-      `<a href="https://github.com/${data.org}/${r.name}" target="_blank">${r.name}</a>` + 
-      (r.isPrivate ? ' <span class="private-badge" title="Private Repository">🔒</span>' : ''),
-      r.track || "-",
-      formatNumber(r.commits_count || 0),
-      (r.contributors || []).slice(0,3).map(c => 
-        `<a href="https://github.com/${c.login}" target="_blank">${c.login}</a> (${c.commits})`
-      ).join(", ") || "-",
-      formatDate(r.last_commit_at),
-    ]);
-    
-    renderTable(
-      document.getElementById("repos"),
-      ["Repository", "Track", "Commits", "Top Contributors", "Last Commit"],
-      rows
-    );
-  }
-
-  // Set up event listeners
-  trackSel.addEventListener("change", applyFilters);
-  minInput.addEventListener("input", applyFilters);
-  showPrivateCheckbox.addEventListener("change", applyFilters);
+  // Store data globally for filtering and other functions
+  window.dashboardData = data;
   
   // Initial filter application
   applyFilters();
@@ -338,7 +304,226 @@ function renderTable(el, headers, rows) {
   el.innerHTML = thead + tbody;
 }
 
+// Create activity chart from repo data
+function createActivityChart(data) {
+  const ctx = document.getElementById('activity-chart').getContext('2d');
+  
+  // Get the top 5 repositories by commits
+  const topRepos = data.leaderboards.top_repos_30d.slice(0, 5);
+  
+  // Create a gradient for the background
+  const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+  gradient.addColorStop(0, 'rgba(94, 157, 255, 0.7)');
+  gradient.addColorStop(1, 'rgba(94, 157, 255, 0.1)');
+  
+  // Create the chart
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: topRepos.map(r => r.repo),
+      datasets: [{
+        label: 'Commits',
+        data: topRepos.map(r => r.commits),
+        backgroundColor: gradient,
+        borderColor: '#5e9dff',
+        borderWidth: 1,
+        borderRadius: 5,
+        hoverBackgroundColor: '#8cbdff',
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Top Repository Activity (Last 30 Days)',
+          color: '#eef',
+          font: {
+            size: 16,
+            family: 'Inter'
+          }
+        },
+        legend: {
+          display: false
+        },
+        tooltip: {
+          backgroundColor: '#0b0f14',
+          titleColor: '#eef',
+          bodyColor: '#eef',
+          borderColor: '#1b2a3a',
+          borderWidth: 1,
+          padding: 10,
+          displayColors: false,
+          callbacks: {
+            label: function(context) {
+              return `${context.parsed.y} commits`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: {
+            color: '#1b2a3a',
+            drawBorder: false,
+          },
+          ticks: {
+            color: '#9ab'
+          }
+        },
+        x: {
+          grid: {
+            display: false
+          },
+          ticks: {
+            color: '#9ab'
+          }
+        }
+      }
+    }
+  });
+}
+
+// Fetch PR stats
+async function fetchPullRequestStats(org, sinceISO) {
+  try {
+    // Fetch open PRs
+    const openPRsResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:pr+is:open&per_page=1`);
+    const openPRsData = await openPRsResponse.json();
+    document.getElementById('open-prs').textContent = openPRsData.total_count || '-';
+    
+    // Fetch merged PRs in the time window
+    const mergedPRsResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:pr+is:merged+merged:>=${sinceISO}&per_page=1`);
+    const mergedPRsData = await mergedPRsResponse.json();
+    document.getElementById('merged-prs').textContent = mergedPRsData.total_count || '-';
+  } catch (e) {
+    console.error('Error fetching PR stats:', e);
+  }
+}
+
+// Fetch issue stats
+async function fetchIssueStats(org, sinceISO) {
+  try {
+    // Fetch open issues
+    const openIssuesResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:issue+is:open&per_page=1`);
+    const openIssuesData = await openIssuesResponse.json();
+    document.getElementById('open-issues').textContent = openIssuesData.total_count || '-';
+    
+    // Fetch closed issues in the time window
+    const closedIssuesResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:issue+is:closed+closed:>=${sinceISO}&per_page=1`);
+    const closedIssuesData = await closedIssuesResponse.json();
+    document.getElementById('closed-issues').textContent = closedIssuesData.total_count || '-';
+  } catch (e) {
+    console.error('Error fetching issue stats:', e);
+  }
+}
+
+// Add search functionality
+function setupSearchFunctionality() {
+  const searchInput = document.getElementById('repo-search');
+  searchInput.addEventListener('input', () => {
+    const track = document.getElementById('track').value;
+    const min = parseInt(document.getElementById('min-commits').value || '0', 10);
+    const showPrivate = document.getElementById('show-private').checked;
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    // Filter and sort repos
+    const filteredRepos = (window.dashboardData.repos || [])
+      .filter(r => (track === "All" ? true : r.track === track))
+      .filter(r => (r.commits_count || 0) >= min)
+      .filter(r => showPrivate ? true : !r.isPrivate)
+      .filter(r => {
+        if (!searchTerm) return true;
+        return r.name.toLowerCase().includes(searchTerm) ||
+               (r.track && r.track.toLowerCase().includes(searchTerm)) ||
+               r.contributors.some(c => c.login.toLowerCase().includes(searchTerm));
+      })
+      .sort((a,b) => (b.commits_count || 0) - (a.commits_count || 0));
+    
+    // Update filter count
+    document.getElementById("filter-count").textContent = 
+      `Showing ${filteredRepos.length} of ${window.dashboardData.repos?.length || 0} repositories`;
+    
+    // Format for table display
+    const rows = filteredRepos.map(r => [
+      `<a href="https://github.com/${window.dashboardData.org}/${r.name}" target="_blank">${r.name}</a>` + 
+      (r.isPrivate ? ' <span class="private-badge" title="Private Repository">🔒</span>' : ''),
+      r.track || "-",
+      formatNumber(r.commits_count || 0),
+      (r.contributors || []).slice(0,3).map(c => 
+        `<a href="https://github.com/${c.login}" target="_blank">${c.login}</a> (${c.commits})`
+      ).join(", ") || "-",
+      formatDate(r.last_commit_at),
+    ]);
+    
+    renderTable(
+      document.getElementById("repos"),
+      ["Repository", "Track", "Commits", "Top Contributors", "Last Commit"],
+      rows
+    );
+  });
+}
+
+// Modify the filter function to store data globally
+function applyFilters() {
+  const track = document.getElementById('track').value;
+  const min = parseInt(document.getElementById('min-commits').value || '0', 10);
+  const showPrivate = document.getElementById('show-private').checked;
+  const searchTerm = document.getElementById('repo-search').value.toLowerCase().trim();
+  
+  // Filter and sort repos
+  const filteredRepos = (window.dashboardData.repos || [])
+    .filter(r => (track === "All" ? true : r.track === track))
+    .filter(r => (r.commits_count || 0) >= min)
+    .filter(r => showPrivate ? true : !r.isPrivate)
+    .filter(r => {
+      if (!searchTerm) return true;
+      return r.name.toLowerCase().includes(searchTerm) ||
+             (r.track && r.track.toLowerCase().includes(searchTerm)) ||
+             r.contributors.some(c => c.login.toLowerCase().includes(searchTerm));
+    })
+    .sort((a,b) => (b.commits_count || 0) - (a.commits_count || 0));
+  
+  // Update filter count
+  document.getElementById("filter-count").textContent = 
+    `Showing ${filteredRepos.length} of ${window.dashboardData.repos?.length || 0} repositories`;
+  
+  // Format for table display
+  const rows = filteredRepos.map(r => [
+    `<a href="https://github.com/${window.dashboardData.org}/${r.name}" target="_blank">${r.name}</a>` + 
+    (r.isPrivate ? ' <span class="private-badge" title="Private Repository">🔒</span>' : ''),
+    r.track || "-",
+    formatNumber(r.commits_count || 0),
+    (r.contributors || []).slice(0,3).map(c => 
+      `<a href="https://github.com/${c.login}" target="_blank">${c.login}</a> (${c.commits})`
+    ).join(", ") || "-",
+    formatDate(r.last_commit_at),
+  ]);
+  
+  renderTable(
+    document.getElementById("repos"),
+    ["Repository", "Track", "Commits", "Top Contributors", "Last Commit"],
+    rows
+  );
+}
+
 // Initialize the dashboard
 document.addEventListener('DOMContentLoaded', () => {
+  // Set up event listeners
+  document.getElementById('track').addEventListener('change', applyFilters);
+  document.getElementById('min-commits').addEventListener('input', applyFilters);
+  document.getElementById('show-private').addEventListener('change', applyFilters);
+  document.getElementById('repo-search').addEventListener('input', applyFilters);
+  
+  // Store data globally for filtering
+  window.dashboardData = {
+    repos: [],
+    org: '',
+    leaderboards: {}
+  };
+  
+  // Load data
   load();
 });
