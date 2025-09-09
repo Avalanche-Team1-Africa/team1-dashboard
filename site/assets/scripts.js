@@ -49,6 +49,7 @@ async function load() {
   document.getElementById("stats-url").textContent = `https://api.github.com/orgs/${org}/repos`;
   document.getElementById("status-indicator").textContent = "Loading data from GitHub API...";
   document.getElementById("status-indicator").style.color = "#5e9dff";
+  document.getElementById("loading-spinner").style.display = "inline-block";
   
   // Calculate dates for filtering commits
   const now = new Date();
