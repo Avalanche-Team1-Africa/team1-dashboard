@@ -41,6 +41,7 @@ jobs:
         run: |
           mkdir -p public
           cp -R site/* public/
+          cp dashboard.html public/index.html
 
       # Upload the built site as an artifact for Pages
       - name: Upload Pages artifact
