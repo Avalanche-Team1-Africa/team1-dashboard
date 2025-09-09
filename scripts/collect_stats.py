@@ -54,7 +54,8 @@ def list_org_repos():
             name 
             nameWithOwner 
             isArchived 
-            isDisabled 
+            isDisabled
+            isPrivate
             updatedAt 
             pushedAt
             repositoryTopics(first:20){nodes{topic{name}}}
