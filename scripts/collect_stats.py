@@ -48,7 +48,6 @@ def list_org_repos():
         repositories(
           first:100, 
           after:$cursor, 
-          privacy:PUBLIC, 
           orderBy:{field:UPDATED_AT, direction:DESC}
         ) {
           nodes { 

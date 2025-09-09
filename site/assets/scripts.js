@@ -151,7 +151,8 @@ async function load() {
     
     // Format for table display
     const rows = filteredRepos.map(r => [
-      `<a href="https://github.com/${data.org}/${r.name}" target="_blank">${r.name}</a>`,
+      `<a href="https://github.com/${data.org}/${r.name}" target="_blank">${r.name}</a>` + 
+      (r.isPrivate ? ' <span class="private-badge" title="Private Repository">🔒</span>' : ''),
       r.track || "-",
       formatNumber(r.commits_count || 0),
       (r.contributors || []).slice(0,3).map(c => 
