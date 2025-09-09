@@ -1,37 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta     <section class="grid">
-      <div class="card">
-        <h2>🔄 Pull Requests</h2>
-        <div class="stat-box">
-          <div class="stat">
-            <div class="stat-value" id="open-prs">-</div>
-            <div class="stat-label">Open PRs</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value" id="merged-prs">-</div>
-            <div class="stat-label">Merged (30d)</div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <h2>⚠️ Issues</h2>
-        <div class="stat-box">
-          <div class="stat">
-            <div class="stat-value" id="open-issues">-</div>
-            <div class="stat-label">Open Issues</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value" id="closed-issues">-</div>
-            <div class="stat-label">Closed (30d)</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="card">
-      <h2>🔍 Repository Activity</h2>arset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team1 Activity Dashboard</title>
   <link rel="stylesheet" href="Assets/Styles.css" />
@@ -63,13 +33,42 @@
 
     <section class="grid">
       <div class="card">
-        <h2>� Top Repositories (30d)</h2>
+        <h2>🔄 Pull Requests</h2>
+        <div class="stat-box">
+          <div class="stat">
+            <div class="stat-value" id="open-prs">-</div>
+            <div class="stat-label">Open PRs</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="merged-prs">-</div>
+            <div class="stat-label">Merged</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>⚠️ Issues</h2>
+        <div class="stat-box">
+          <div class="stat">
+            <div class="stat-value" id="open-issues">-</div>
+            <div class="stat-label">Open Issues</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="closed-issues">-</div>
+            <div class="stat-label">Closed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="grid">
+      <div class="card">
+        <h2>� Top Repositories</h2>
         <div class="table-container">
           <table id="top-repos" class="tbl"></table>
         </div>
       </div>
       <div class="card">
-        <h2>👥 Top Contributors (30d)</h2>
+        <h2>👥 Top Contributors</h2>
         <div class="table-container">
           <table id="top-contrib" class="tbl"></table>
         </div>
@@ -77,7 +76,7 @@
     </section>
 
     <section class="card">
-      <h2>� Repository Activity</h2>
+      <h2>🔍 Repository Activity</h2>
       <div class="controls">
         <label>
           <span>Track:</span>

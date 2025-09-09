@@ -266,18 +266,17 @@ function inferTrackFromTopics(repo) {
 }
 
 function calculateLeaderboards(data) {
-  // Calculate top repos
+  // Calculate top repos (showing all, not limited to 10)
   const repoMap = new Map();
   data.repos.forEach(repo => {
     repoMap.set(repo.name, repo.commits_count || 0);
   });
   
-  data.leaderboards.top_repos_30d = [...repoMap.entries()]
+  data.leaderboards.top_repos = [...repoMap.entries()]
     .map(([repo, commits]) => ({ repo, commits }))
-    .sort((a, b) => b.commits - a.commits)
-    .slice(0, 10);
+    .sort((a, b) => b.commits - a.commits);
   
-  // Calculate top contributors
+  // Calculate top contributors (showing all, not limited to 15)
   const contributorMap = new Map();
   data.repos.forEach(repo => {
     (repo.contributors || []).forEach(c => {
@@ -285,10 +284,9 @@ function calculateLeaderboards(data) {
     });
   });
   
-  data.leaderboards.top_contributors_30d = [...contributorMap.entries()]
+  data.leaderboards.top_contributors = [...contributorMap.entries()]
     .map(([login, commits]) => ({ login, commits }))
-    .sort((a, b) => b.commits - a.commits)
-    .slice(0, 15);
+    .sort((a, b) => b.commits - a.commits);
 }
 
 // Table rendering function
@@ -302,8 +300,8 @@ function renderTable(el, headers, rows) {
 function createActivityChart(data) {
   const ctx = document.getElementById('activity-chart').getContext('2d');
   
-  // Get the top 5 repositories by commits
-  const topRepos = data.leaderboards.top_repos_30d.slice(0, 5);
+  // Get the top 10 repositories by commits
+  const topRepos = data.leaderboards.top_repos.slice(0, 10);
   
   // Create a gradient for the background
   const gradient = ctx.createLinearGradient(0, 0, 0, 300);
@@ -331,7 +329,7 @@ function createActivityChart(data) {
       plugins: {
         title: {
           display: true,
-          text: 'Top Repository Activity (Last 30 Days)',
+          text: 'Top Repository Activity (All-Time)',
           color: '#eef',
           font: {
             size: 16,
@@ -380,16 +378,16 @@ function createActivityChart(data) {
   });
 }
 
-// Fetch PR stats
-async function fetchPullRequestStats(org, sinceISO) {
+// Fetch PR stats (all-time)
+async function fetchPullRequestStats(org) {
   try {
     // Fetch open PRs
     const openPRsResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:pr+is:open&per_page=1`);
     const openPRsData = await openPRsResponse.json();
     document.getElementById('open-prs').textContent = openPRsData.total_count || '-';
     
-    // Fetch merged PRs in the time window
-    const mergedPRsResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:pr+is:merged+merged:>=${sinceISO}&per_page=1`);
+    // Fetch all merged PRs (not filtered by date)
+    const mergedPRsResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:pr+is:merged&per_page=1`);
     const mergedPRsData = await mergedPRsResponse.json();
     document.getElementById('merged-prs').textContent = mergedPRsData.total_count || '-';
   } catch (e) {
@@ -397,16 +395,16 @@ async function fetchPullRequestStats(org, sinceISO) {
   }
 }
 
-// Fetch issue stats
-async function fetchIssueStats(org, sinceISO) {
+// Fetch issue stats (all-time)
+async function fetchIssueStats(org) {
   try {
     // Fetch open issues
     const openIssuesResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:issue+is:open&per_page=1`);
     const openIssuesData = await openIssuesResponse.json();
     document.getElementById('open-issues').textContent = openIssuesData.total_count || '-';
     
-    // Fetch closed issues in the time window
-    const closedIssuesResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:issue+is:closed+closed:>=${sinceISO}&per_page=1`);
+    // Fetch all closed issues (not filtered by date)
+    const closedIssuesResponse = await fetch(`https://api.github.com/search/issues?q=org:${org}+is:issue+is:closed&per_page=1`);
     const closedIssuesData = await closedIssuesResponse.json();
     document.getElementById('closed-issues').textContent = closedIssuesData.total_count || '-';
   } catch (e) {
