@@ -85,6 +85,7 @@ async function load() {
     
     document.getElementById("status-indicator").textContent = "Data loaded successfully";
     document.getElementById("status-indicator").style.color = "#4CAF50";
+    document.getElementById("loading-spinner").style.display = "none";
   } catch (e) {
     document.getElementById("meta").textContent = "Failed to load data: " + e.message;
     document.getElementById("status-indicator").textContent = "Error loading data";
