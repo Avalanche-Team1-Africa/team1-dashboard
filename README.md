@@ -71,3 +71,9 @@ infra:
 ai:
   - ai-agent# team1-dashboard
 A digital dashboard that tracks builder engagement
+
+
+
+![alt text](image.png)
+
+https://curly-adventure-69g4vpvgqxgq25v6-5500.app.github.dev/dashboard.html
