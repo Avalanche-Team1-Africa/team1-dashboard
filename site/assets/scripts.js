@@ -51,8 +51,7 @@ async function load() {
   document.getElementById("status-indicator").style.color = "#5e9dff";
   document.getElementById("loading-spinner").style.display = "inline-block";
   
-  // Calculate dates for filtering commits for time-based metrics
-  // We'll still use this for PR/Issue stats, but not for commit counts
+  // Calculate dates for filtering commits
   const now = new Date();
   const since = new Date(now);
   since.setDate(now.getDate() - windowDays);
@@ -187,15 +186,14 @@ async function fetchRepoActivity(repo, sinceISO) {
     full: repo.full_name,
     topics: repo.topics || [],
     track: inferTrackFromTopics(repo),
-    isPrivate: repo.private,
     commits_count: 0,
     contributors: [],
     last_commit_at: repo.pushed_at
   };
   
   try {
-    // Fetch all commits by not specifying the since parameter
-    const commitsUrl = `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?per_page=100`;
+    // Fetch commits since the cutoff date
+    const commitsUrl = `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?since=${sinceISO}&per_page=100`;
     const response = await fetch(commitsUrl);
     
     if (!response.ok) {
