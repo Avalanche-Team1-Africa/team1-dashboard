@@ -1,6 +1,6 @@
 {
   "org": "Avalanche-Team1-Africa",
-  "generated_at": "2025-09-09T05:13:30.525168Z",
+  "generated_at": "2025-09-09T05:21:18.683523Z",
   "window_days": 30,
   "repos_total": 68,
   "repos": [
@@ -9,7 +9,8 @@
       "full": "Avalanche-Team1-Africa/team1-dashboard",
       "topics": [],
       "track": null,
-      "commits_count": 16,
+      "isPrivate": false,
+      "commits_count": 22,
       "contributors": [
         {
           "login": "EstherLavender",
@@ -17,16 +18,17 @@
         },
         {
           "login": "JosephNjorog",
-          "commits": 3
+          "commits": 9
         }
       ],
-      "last_commit_at": "2025-09-09T05:02:10Z"
+      "last_commit_at": "2025-09-09T05:21:00Z"
     },
     {
       "name": "PledgR",
       "full": "Avalanche-Team1-Africa/PledgR",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 21,
       "contributors": [
         {
@@ -41,6 +43,7 @@
       "full": "Avalanche-Team1-Africa/KweliVote",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 1,
       "contributors": [
         {
@@ -55,6 +58,7 @@
       "full": "Avalanche-Team1-Africa/portfolio-starter-kit",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-08-06T15:53:21Z"
@@ -64,6 +68,7 @@
       "full": "Avalanche-Team1-Africa/create-issue-action",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2024-04-26T02:40:31Z"
@@ -73,6 +78,7 @@
       "full": "Avalanche-Team1-Africa/APY-Aggregaor",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-07-20T13:59:32Z"
@@ -82,6 +88,7 @@
       "full": "Avalanche-Team1-Africa/Docs",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-07-28T15:27:58Z"
@@ -91,6 +98,7 @@
       "full": "Avalanche-Team1-Africa/Team---AI-Smart-Contract-Debugger-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-07-04T22:54:55Z"
@@ -100,6 +108,7 @@
       "full": "Avalanche-Team1-Africa/Tg_mini_app",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-27T16:03:44Z"
@@ -109,6 +118,7 @@
       "full": "Avalanche-Team1-Africa/Team-10-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:48:02Z"
@@ -118,6 +128,7 @@
       "full": "Avalanche-Team1-Africa/Team-8-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:45:17Z"
@@ -127,6 +138,7 @@
       "full": "Avalanche-Team1-Africa/Team-5-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:38:21Z"
@@ -136,6 +148,7 @@
       "full": "Avalanche-Team1-Africa/Team-4-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:36:07Z"
@@ -145,6 +158,7 @@
       "full": "Avalanche-Team1-Africa/Team-3-NightsOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:34:16Z"
@@ -154,6 +168,7 @@
       "full": "Avalanche-Team1-Africa/Team-2-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:32:20Z"
@@ -163,6 +178,7 @@
       "full": "Avalanche-Team1-Africa/Team-1-NightOfCode-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-20T21:28:55Z"
@@ -172,6 +188,7 @@
       "full": "Avalanche-Team1-Africa/avasend",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T10:05:20Z"
@@ -181,6 +198,7 @@
       "full": "Avalanche-Team1-Africa/Chain",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-11T10:31:28Z"
@@ -190,6 +208,7 @@
       "full": "Avalanche-Team1-Africa/Education-Access",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-07T12:30:26Z"
@@ -199,6 +218,7 @@
       "full": "Avalanche-Team1-Africa/Identity-Access",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-07T12:28:09Z"
@@ -208,6 +228,7 @@
       "full": "Avalanche-Team1-Africa/Avachama",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-07T12:27:17Z"
@@ -217,6 +238,7 @@
       "full": "Avalanche-Team1-Africa/Events-Ticketing",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-07T12:23:15Z"
@@ -226,6 +248,7 @@
       "full": "Avalanche-Team1-Africa/event-vax",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-27T17:18:00Z"
@@ -235,6 +258,7 @@
       "full": "Avalanche-Team1-Africa/Daobitat-frontend",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-19T14:49:55Z"
@@ -244,6 +268,7 @@
       "full": "Avalanche-Team1-Africa/Event-Ticketing",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-18T07:59:24Z"
@@ -253,6 +278,7 @@
       "full": "Avalanche-Team1-Africa/Carbon-Corp",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T13:25:40Z"
@@ -262,6 +288,7 @@
       "full": "Avalanche-Team1-Africa/Daobitat-contracts",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T11:22:37Z"
@@ -271,6 +298,7 @@
       "full": "Avalanche-Team1-Africa/carlogix",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-06-10T10:52:54Z"
@@ -280,6 +308,7 @@
       "full": "Avalanche-Team1-Africa/Micro-Lending-System",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T09:45:14Z"
@@ -289,6 +318,7 @@
       "full": "Avalanche-Team1-Africa/Emktec-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T08:39:30Z"
@@ -298,6 +328,7 @@
       "full": "Avalanche-Team1-Africa/heritagechain-protocol",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T08:24:06Z"
@@ -307,6 +338,7 @@
       "full": "Avalanche-Team1-Africa/Orion",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-17T08:04:41Z"
@@ -316,6 +348,7 @@
       "full": "Avalanche-Team1-Africa/plastic-soko",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-16T22:29:14Z"
@@ -325,6 +358,7 @@
       "full": "Avalanche-Team1-Africa/Certificate-Issuance-System",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-05-15T07:11:14Z"
@@ -334,6 +368,7 @@
       "full": "Avalanche-Team1-Africa/irungu",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T20:15:23Z"
@@ -343,6 +378,7 @@
       "full": "Avalanche-Team1-Africa/MyApplication",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T17:53:52Z"
@@ -352,6 +388,7 @@
       "full": "Avalanche-Team1-Africa/Cell",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:27:18Z"
@@ -361,6 +398,7 @@
       "full": "Avalanche-Team1-Africa/J-an-john",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:27:07Z"
@@ -370,6 +408,7 @@
       "full": "Avalanche-Team1-Africa/unfiled",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:25:50Z"
@@ -379,6 +418,7 @@
       "full": "Avalanche-Team1-Africa/FarmTrace",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-13T11:07:50Z"
@@ -388,6 +428,7 @@
       "full": "Avalanche-Team1-Africa/JuliusMaaTech",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:24:37Z"
@@ -397,6 +438,7 @@
       "full": "Avalanche-Team1-Africa/BRIAN",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:23:27Z"
@@ -406,6 +448,7 @@
       "full": "Avalanche-Team1-Africa/DigiMart",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:23:27Z"
@@ -415,6 +458,7 @@
       "full": "Avalanche-Team1-Africa/wisly",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:22:37Z"
@@ -424,6 +468,7 @@
       "full": "Avalanche-Team1-Africa/Imageclassification-",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:20:37Z"
@@ -433,6 +478,7 @@
       "full": "Avalanche-Team1-Africa/Snow",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:17:23Z"
@@ -442,6 +488,7 @@
       "full": "Avalanche-Team1-Africa/Gitonga",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:15:36Z"
@@ -451,6 +498,7 @@
       "full": "Avalanche-Team1-Africa/app1",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:15:21Z"
@@ -460,6 +508,7 @@
       "full": "Avalanche-Team1-Africa/Projecthosisalama",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:14:38Z"
@@ -469,6 +518,7 @@
       "full": "Avalanche-Team1-Africa/paul",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:10:40Z"
@@ -478,6 +528,7 @@
       "full": "Avalanche-Team1-Africa/GenGram",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-03-24T15:09:15Z"
@@ -487,6 +538,7 @@
       "full": "Avalanche-Team1-Africa/Token-Contract-for-Digital-Assets",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-01T12:16:29Z"
@@ -496,6 +548,7 @@
       "full": "Avalanche-Team1-Africa/Lottery-DAO",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-08T17:52:43Z"
@@ -509,6 +562,7 @@
         "defi"
       ],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-22T21:05:30Z"
@@ -518,6 +572,7 @@
       "full": "Avalanche-Team1-Africa/Crowdfunding-team-5",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-21T11:27:22Z"
@@ -527,6 +582,7 @@
       "full": "Avalanche-Team1-Africa/jengawize",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-01T10:09:22Z"
@@ -536,6 +592,7 @@
       "full": "Avalanche-Team1-Africa/Freelancer_Payment_Escrow",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-01T09:04:48Z"
@@ -545,6 +602,7 @@
       "full": "Avalanche-Team1-Africa/GreenXchange",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-02-01T09:08:44Z"
@@ -554,6 +612,7 @@
       "full": "Avalanche-Team1-Africa/Rock-Paper-Scissors-Game",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-31T13:46:28Z"
@@ -563,6 +622,7 @@
       "full": "Avalanche-Team1-Africa/Subscription-Management-System",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-31T13:20:50Z"
@@ -572,6 +632,7 @@
       "full": "Avalanche-Team1-Africa/Time-Locked-Savings-Contract",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-31T10:22:49Z"
@@ -581,6 +642,7 @@
       "full": "Avalanche-Team1-Africa/Charity-Fund",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-20T07:10:04Z"
@@ -590,6 +652,7 @@
       "full": "Avalanche-Team1-Africa/Loyalty-Points-Platform",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-18T19:05:34Z"
@@ -599,6 +662,7 @@
       "full": "Avalanche-Team1-Africa/CrowdFunding-Group19",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-17T18:39:51Z"
@@ -608,6 +672,7 @@
       "full": "Avalanche-Team1-Africa/Rental-Contract-Agreement",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-15T20:09:12Z"
@@ -617,6 +682,7 @@
       "full": "Avalanche-Team1-Africa/Avalanche-L1-Days",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-09T09:40:03Z"
@@ -626,6 +692,7 @@
       "full": "Avalanche-Team1-Africa/GiftRegistry",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-08T09:51:47Z"
@@ -635,6 +702,7 @@
       "full": "Avalanche-Team1-Africa/skill-badge-system",
       "topics": [],
       "track": null,
+      "isPrivate": false,
       "commits_count": 0,
       "contributors": [],
       "last_commit_at": "2025-01-04T10:57:47Z"
@@ -643,12 +711,12 @@
   "leaderboards": {
     "top_repos_30d": [
       {
-        "repo": "PledgR",
-        "commits": 21
+        "repo": "team1-dashboard",
+        "commits": 22
       },
       {
-        "repo": "team1-dashboard",
-        "commits": 16
+        "repo": "PledgR",
+        "commits": 21
       },
       {
         "repo": "KweliVote",
@@ -694,7 +762,7 @@
       },
       {
         "login": "JosephNjorog",
-        "commits": 3
+        "commits": 9
       },
       {
         "login": "snjiraini",
