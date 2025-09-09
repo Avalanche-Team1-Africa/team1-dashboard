@@ -196,7 +196,7 @@ def main():
             json.dump(org_stats, f, indent=2)
         print(f"Successfully saved stats to {stats_path}")
     except Exception as e:
-        # If that fails, save to the current directory
+        # If that fails, save to the current directory.
         print(f"Error saving to site directory: {e}")
         try:
             with open("stats.json", "w") as f:
