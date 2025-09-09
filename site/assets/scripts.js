@@ -51,12 +51,6 @@ async function load() {
   document.getElementById("status-indicator").style.color = "#5e9dff";
   document.getElementById("loading-spinner").style.display = "inline-block";
   
-  // Calculate dates for filtering commits
-  const now = new Date();
-  const since = new Date(now);
-  since.setDate(now.getDate() - windowDays);
-  const sinceISO = since.toISOString();
-  
   // Object to store all our collected data
   const data = {
     org: org,
@@ -64,8 +58,8 @@ async function load() {
     window_days: windowDays,
     repos: [],
     leaderboards: {
-      top_repos_30d: [],
-      top_contributors_30d: []
+      top_repos: [],
+      top_contributors: []
     }
   };
   
@@ -76,8 +70,8 @@ async function load() {
     
     document.getElementById("status-indicator").textContent = `Found ${activeRepos.length} repositories, fetching activity...`;
     
-    // Step 2: Fetch commits for each repo within the time window
-    const repoPromises = activeRepos.map(repo => fetchRepoActivity(repo, sinceISO));
+    // Step 2: Fetch all commits for each repo (not filtered by date)
+    const repoPromises = activeRepos.map(repo => fetchRepoActivity(repo));
     data.repos = await Promise.all(repoPromises);
     
     // Step 3: Calculate leaderboards
@@ -111,7 +105,7 @@ async function load() {
   renderTable(
     document.getElementById("top-repos"),
     ["#", "Repository", "Commits"],
-    (data.leaderboards?.top_repos_30d || []).map((x, i) => [
+    (data.leaderboards?.top_repos || []).map((x, i) => [
       i + 1, 
       `<a href="https://github.com/${data.org}/${x.repo}" target="_blank">${x.repo}</a>`, 
       formatNumber(x.commits)
@@ -122,7 +116,7 @@ async function load() {
   renderTable(
     document.getElementById("top-contrib"),
     ["#", "Contributor", "Commits"],
-    (data.leaderboards?.top_contributors_30d || []).map((x, i) => [
+    (data.leaderboards?.top_contributors || []).map((x, i) => [
       i + 1, 
       `<a href="https://github.com/${x.login}" target="_blank">${x.login}</a>`, 
       formatNumber(x.commits)
@@ -180,7 +174,7 @@ async function fetchAllRepos(org) {
   return repos;
 }
 
-async function fetchRepoActivity(repo, sinceISO) {
+async function fetchRepoActivity(repo) {
   const repoInfo = {
     name: repo.name,
     full: repo.full_name,
@@ -192,8 +186,8 @@ async function fetchRepoActivity(repo, sinceISO) {
   };
   
   try {
-    // Fetch commits since the cutoff date
-    const commitsUrl = `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?since=${sinceISO}&per_page=100`;
+    // Fetch all commits (not filtered by date)
+    const commitsUrl = `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?per_page=100`;
     const response = await fetch(commitsUrl);
     
     if (!response.ok) {
