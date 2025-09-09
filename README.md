@@ -77,3 +77,45 @@ A digital dashboard that tracks builder engagement
 ![alt text](image.png)
 
 https://curly-adventure-69g4vpvgqxgq25v6-5500.app.github.dev/dashboard.html
+
+
+
+Deployment Instructions
+
+
+Set up GitHub Pages:
+
+Your repository already has a GitHub Actions workflow configured in collect.yml
+This workflow:
+Runs the collect_stats.py script to fetch repository data
+Copies the site directory to public/
+Deploys to GitHub Pages
+Configure GitHub Secrets:
+
+For private repository access, you need a GitHub Personal Access Token (PAT) with repo scope
+Go to your repository on GitHub
+Navigate to Settings > Secrets and variables > Actions
+Add a new repository secret named GH_PAT with your personal access token
+Run the Workflow:
+
+Go to the Actions tab in your GitHub repository
+Select the "Build stats & deploy Pages" workflow
+Click "Run workflow" and select the main branch
+This will collect the latest stats and deploy your dashboard
+Access Your Dashboard:
+
+After deployment, your dashboard will be available at: https://avalanche-team1-africa.github.io/team1-dashboard/
+Required Permissions
+To access private repositories, make sure your GitHub token has:
+
+repo scope for private repository access
+read:org scope for organization access
+Maintenance
+The GitHub Actions workflow is set to run daily at 01:17 UTC, which will:
+
+Collect fresh repository data
+Update the stats.json file
+Redeploy the dashboard
+You can also manually trigger the workflow from the Actions tab whenever you want to update the dashboard.
+
+Would you like me to explain any particular part of the implementation in more detail?
