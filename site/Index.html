@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta     <section class="grid">
+      <div class="card">
+        <h2>🔄 Pull Requests</h2>
+        <div class="stat-box">
+          <div class="stat">
+            <div class="stat-value" id="open-prs">-</div>
+            <div class="stat-label">Open PRs</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="merged-prs">-</div>
+            <div class="stat-label">Merged (30d)</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>⚠️ Issues</h2>
+        <div class="stat-box">
+          <div class="stat">
+            <div class="stat-value" id="open-issues">-</div>
+            <div class="stat-label">Open Issues</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="closed-issues">-</div>
+            <div class="stat-label">Closed (30d)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>🔍 Repository Activity</h2>arset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team1 Activity Dashboard</title>
   <link rel="stylesheet" href="Assets/Styles.css" />
@@ -14,8 +44,10 @@
     <p id="meta" class="muted"></p>
     <div class="notice">
       <strong>Dashboard Status:</strong> 
-      <span id="status-indicator">Loading data...</span>
-      <br>
+      <div class="status-container">
+        <div id="loading-spinner" class="spinner"></div>
+        <span id="status-indicator">Loading data...</span>
+      </div>
       Data source: <code id="stats-url"></code>
       (override with <code>?org=ORG_NAME&days=30</code>)
     </div>
