@@ -90,6 +90,7 @@ async function load() {
     document.getElementById("meta").textContent = "Failed to load data: " + e.message;
     document.getElementById("status-indicator").textContent = "Error loading data";
     document.getElementById("status-indicator").style.color = "#F44336";
+    document.getElementById("loading-spinner").style.display = "none";
     console.error(e);
     return;
   }
