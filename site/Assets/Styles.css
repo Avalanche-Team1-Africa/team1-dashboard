@@ -98,6 +98,16 @@ label {
   font-weight: 500;
 }
 
+.checkbox-label {
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
 input, select {
   background: #0b1a28;
   border: 1px solid #1b2a3a;
@@ -105,6 +115,10 @@ input, select {
   border-radius: 8px;
   padding: 8px 12px;
   transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="checkbox"] {
+  padding: 0;
 }
 
 input:focus, select:focus {

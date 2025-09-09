@@ -79,6 +79,7 @@ def list_org_repos():
                 "full": n["nameWithOwner"],
                 "archived": n["isArchived"],
                 "disabled": n["isDisabled"],
+                "isPrivate": n["isPrivate"],
                 "updatedAt": n["updatedAt"],
                 "pushedAt": n["pushedAt"],
                 "topics": topics,
@@ -158,6 +159,7 @@ def main():
             "full": r["full"],
             "topics": r["topics"],
             "track": track,
+            "isPrivate": r.get("isPrivate", False),
             "commits_count": len(commits),
             "contributors": [
                 {"login": k, "commits": v}
