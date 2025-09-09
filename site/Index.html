@@ -4,48 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team1 Activity Dashboard</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="Assets/Styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="container">
     <h1>🔥 Avalanche Team1 – Builder Activity</h1>
     <p id="meta" class="muted"></p>
     <div class="notice">
+      <strong>Dashboard Status:</strong> 
+      <span id="status-indicator">Loading data...</span>
+      <br>
       Data source: <code id="stats-url"></code>
-      (override with <code>?stats=FULL_URL</code>)
+      (override with <code>?org=ORG_NAME&days=30</code>)
     </div>
   </header>
 
   <main class="container">
     <section class="grid">
       <div class="card">
-        <h2>Top Repos (30d)</h2>
-        <table id="top-repos" class="tbl"></table>
+        <h2>📊 Top Repositories (30d)</h2>
+        <div class="table-container">
+          <table id="top-repos" class="tbl"></table>
+        </div>
       </div>
       <div class="card">
-        <h2>Top Contributors (30d)</h2>
-        <table id="top-contrib" class="tbl"></table>
+        <h2>👥 Top Contributors (30d)</h2>
+        <div class="table-container">
+          <table id="top-contrib" class="tbl"></table>
+        </div>
       </div>
     </section>
 
     <section class="card">
-      <h2>Repo Activity</h2>
+      <h2>📈 Repository Activity</h2>
       <div class="controls">
-        <label>Track
+        <label>
+          <span>Track:</span>
           <select id="track"></select>
         </label>
-        <label>Min commits
+        <label>
+          <span>Min commits:</span>
           <input id="min-commits" type="number" min="0" value="0" />
         </label>
+        <div id="filter-count" class="muted"></div>
       </div>
-      <table id="repos" class="tbl"></table>
+      <div class="table-container">
+        <table id="repos" class="tbl"></table>
+      </div>
     </section>
   </main>
 
   <footer class="container muted">
-    Built as a static page. Hosted on GitHub Pages.
+    <p>Team1 Dashboard | Built as a static page | Last Updated: <span id="update-time"></span></p>
+    <p>Hosted on GitHub Pages | &copy; 2025 Avalanche-Team1-Africa</p>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script src="assets/scripts.js"></script>
 </body>
 </html>

@@ -183,9 +183,28 @@ def main():
     )[:15]
 
     # Save to JSON
-    os.makedirs("public", exist_ok=True)
-    with open("public/stats.json", "w") as f:
-        json.dump(org_stats, f, indent=2)
+    try:
+        # First try to save to the site directory
+        script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        site_dir = os.path.join(script_dir, "site")
+        os.makedirs(site_dir, exist_ok=True)
+        stats_path = os.path.join(site_dir, "stats.json")
+        print(f"Attempting to save stats to {stats_path}")
+        with open(stats_path, "w") as f:
+            json.dump(org_stats, f, indent=2)
+        print(f"Successfully saved stats to {stats_path}")
+    except Exception as e:
+        # If that fails, save to the current directory
+        print(f"Error saving to site directory: {e}")
+        try:
+            with open("stats.json", "w") as f:
+                json.dump(org_stats, f, indent=2)
+            print(f"Saved stats.json to current directory instead")
+        except Exception as e2:
+            print(f"Error saving to current directory too: {e2}")
+            # At least print the stats so they're visible
+            print("\nJSON output for manual use:")
+            print(json.dumps(org_stats, indent=2))
 
 # ---------------- ENTRY ----------------
 if __name__ == "__main__":
