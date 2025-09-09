@@ -133,16 +133,19 @@ async function load() {
   });
 
   const minInput = document.getElementById("min-commits");
+  const showPrivateCheckbox = document.getElementById("show-private");
 
   // Filter function for repo activity
   function applyFilters() {
     const track = trackSel.value;
     const min = parseInt(minInput.value || "0", 10);
+    const showPrivate = showPrivateCheckbox.checked;
     
     // Filter and sort repos
     const filteredRepos = (data.repos || [])
       .filter(r => (track === "All" ? true : r.track === track))
       .filter(r => (r.commits_count || 0) >= min)
+      .filter(r => showPrivate ? true : !r.isPrivate)
       .sort((a,b) => (b.commits_count || 0) - (a.commits_count || 0));
     
     // Update filter count
@@ -171,6 +174,7 @@ async function load() {
   // Set up event listeners
   trackSel.addEventListener("change", applyFilters);
   minInput.addEventListener("input", applyFilters);
+  showPrivateCheckbox.addEventListener("change", applyFilters);
   
   // Initial filter application
   applyFilters();
