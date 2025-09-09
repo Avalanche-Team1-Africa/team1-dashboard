@@ -6,6 +6,7 @@
   <title>Team1 Activity Dashboard</title>
   <link rel="stylesheet" href="Assets/Styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header class="container">
@@ -21,9 +22,16 @@
   </header>
 
   <main class="container">
+    <section class="card">
+      <h2>📊 Activity Overview</h2>
+      <div class="chart-container">
+        <canvas id="activity-chart"></canvas>
+      </div>
+    </section>
+
     <section class="grid">
       <div class="card">
-        <h2>📊 Top Repositories (30d)</h2>
+        <h2>� Top Repositories (30d)</h2>
         <div class="table-container">
           <table id="top-repos" class="tbl"></table>
         </div>
@@ -37,7 +45,7 @@
     </section>
 
     <section class="card">
-      <h2>📈 Repository Activity</h2>
+      <h2>� Repository Activity</h2>
       <div class="controls">
         <label>
           <span>Track:</span>
@@ -51,6 +59,9 @@
           <input id="show-private" type="checkbox" checked />
           <span>Show private repos</span>
         </label>
+      </div>
+      <div class="search-box">
+        <input type="text" id="repo-search" placeholder="Search repositories..." />
         <div id="filter-count" class="muted"></div>
       </div>
       <div class="table-container">
