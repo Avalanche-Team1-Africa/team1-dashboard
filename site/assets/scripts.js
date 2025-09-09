@@ -97,9 +97,9 @@ async function load() {
   // Create activity chart
   createActivityChart(data);
   
-  // Fetch and update PR and Issue stats
-  fetchPullRequestStats(org, sinceISO);
-  fetchIssueStats(org, sinceISO);
+  // Fetch and update PR and Issue stats (all-time)
+  fetchPullRequestStats(org);
+  fetchIssueStats(org);
 
   // Render top repositories table
   renderTable(
